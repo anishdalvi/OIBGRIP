@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <img src="images/bg.jpg" alt="">
+        <div class="form-container">
+            <div class="form-head">
+                <h1>Temperature Converter</h1>
+            </div>
+            <div class="form-body">
+                <form action="">
+                    <div class="row">
+                        <div class="each media-cel">
+                            <h2>Celsius</h2>
+                            <div class="custom-input">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown();celsiusConvert1()" type="button" class="minus"><i class="fa-solid fa-angle-down"></i></button>
+                                <input type="number" placeholder="&deg;C" id="celsius" oninput="celsiusConvert(this.value)">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();celsiusConvert1()" class="plus" type="button" class="plus"><i class="fa-solid fa-angle-up"></i></button>
+                            </div>   
+                        </div>
+                        <div class="each media-kelvin">
+                            <h2>Kelvin</h2>
+                            <div class="custom-input">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown();kelvinConvert1()" type="button" class="minus"><i class="fa-solid fa-angle-down"></i></button>
+                                <input type="number" placeholder="&deg;K" id="kelvin" oninput="kelvinConvert(this.value) " class="num1">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();kelvinConvert1()" class="plus" type="button" class="plus"><i class="fa-solid fa-angle-up"></i></button>
+                            </div>           
+                        </div>
+                        <div class="each media-fah">
+                            <h2>Fahrenheit</h2>
+                            <div class="custom-input">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown();fahrenheitConvert1()" type="button" class="minus"><i class="fa-solid fa-angle-down"></i></button>
+                                <input type="number" placeholder="&deg;F" id="fahrenheit" oninput="fahrenheitConvert(this.value)" class="num1">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();fahrenheitConvert1()" class="plus" type="button" class="plus"><i class="fa-solid fa-angle-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row reset">
+                        <button id="reset">Reset</button>
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+        
+       <!--  <h1><span></span></h1> -->
+    </div> <!-- backrgound -->
+    
+    <script src="index.js"></script>
+</body>
+</html>
